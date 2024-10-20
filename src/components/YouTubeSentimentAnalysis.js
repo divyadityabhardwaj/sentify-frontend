@@ -38,7 +38,7 @@ function YouTubeSentimentAnalysis() {
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">YouTube Sentiment Analysis</CardTitle>
           <CardDescription className="text-center">
-            Enter a YouTube link to analyze the video's sentiment
+            Enter a YouTube link to analyze the video sentiment
           </CardDescription>
         </CardHeader>
         <CardContent>

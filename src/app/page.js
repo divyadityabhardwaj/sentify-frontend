@@ -10,7 +10,7 @@ const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   console.log(section); 
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView({ behavior: "smooth" }); 
   } else {
     console.error(`Section with ID ${sectionId} not found.`);
   }
@@ -27,10 +27,10 @@ export default function SentifyLandingPage() {
 
   useEffect(() => {
     if (aboutInView) {
-      aboutControls.start('visible')
+      aboutControls.start("visible")
     }
     if (pricingInView) {
-      pricingControls.start('visible')
+      pricingControls.start("visible")
     }
   }, [aboutInView, pricingInView, aboutControls, pricingControls])
 
@@ -203,7 +203,7 @@ export default function SentifyLandingPage() {
               <p className="text-lg text-gray-600 mb-6">
                 Sentify revolutionizes the way you understand your audience. Our advanced sentiment analysis tool
                 processes YouTube comments to provide valuable insights into viewer opinions and emotions. Whether
-                you're a content creator, marketer, or business owner, Sentify helps you make data-driven decisions
+                you are a content creator, marketer, or business owner, Sentify helps you make data-driven decisions
                 to improve your content strategy and engage your audience more effectively.
               </p>
               <button
