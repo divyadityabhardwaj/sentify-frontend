@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { Loader2, Link, Shuffle } from "lucide-react"
-import 'sentify\\src\\app\\globals.css'
+import 'sentify/src/app/globals.css'
 
 const COLORS = ["#A07CEC", "#FFA500", "#FFFFFF"]
 
