@@ -34,32 +34,33 @@ export default function YouTubeSentimentAnalysis() {
     setSentimentData(null)
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/analyze_comments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ video_url: youtubeLink }),
-      })
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/analyze_comments`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ video_url: youtubeLink }),
+        })
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok')
-      }
+        if (!response.ok) {
+            throw new Error('Network response was not ok')
+        }
 
-      const data = await response.json()
-      const sentimentResults = [
-        { name: "Positive", value: data.positive_percentage },
-        { name: "Negative", value: data.negative_percentage },
-        { name: "Neutral", value: 100 - (data.positive_percentage + data.negative_percentage) },
-      ]
+        const data = await response.json()
+        const sentimentResults = [
+            { name: "Positive", value: data.positive_percentage },
+            { name: "Negative", value: data.negative_percentage },
+            { name: "Neutral", value: 100 - (data.positive_percentage + data.negative_percentage) },
+        ]
 
-      setSentimentData(sentimentResults)
+        setSentimentData(sentimentResults)
     } catch (error) {
-      setError(error.message)
+        setError(error.message)
     } finally {
-      setIsLoading(false)
+        setIsLoading(false)
     }
-  }
+}
+
 
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
