@@ -101,6 +101,8 @@ export default function YouTubeSentimentAnalysis() {
                 </>
               )}
             </Button>
+            <span className="text-xs text-gray-400">* Backend will take upto 40 seconds to wake up when using first time.</span>
+            <br />
           </form>
 
           {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
