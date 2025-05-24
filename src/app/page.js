@@ -188,7 +188,7 @@ export default function SentifyLandingPage() {
               variants={slideIn}
             >
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="/images/download.jpeg"
                 alt="Sentiment Analysis Illustration"
                 width={400}
                 height={400}
